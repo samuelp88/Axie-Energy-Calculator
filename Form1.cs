@@ -52,6 +52,7 @@ namespace Overlay
         public void RenderEnergy()
         {
             currentEnergy.Text = EnergyCounter.energy.ToString();
+            round.Text = EnergyCounter.round.ToString();
         }
 
         private void increaseButton_Click(object sender, EventArgs e)
@@ -76,6 +77,12 @@ namespace Overlay
         {
             EnergyCounter.nextRound();
             RenderEnergy();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 credits = new Form2();
+            credits.ShowDialog();
         }
     }
 }

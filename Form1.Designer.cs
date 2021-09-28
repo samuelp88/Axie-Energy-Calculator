@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.alwaysOnTopCheck = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.currentEnergy = new System.Windows.Forms.TextBox();
@@ -35,12 +36,15 @@
             this.decreaseButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.round = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // alwaysOnTopCheck
             // 
             this.alwaysOnTopCheck.AutoSize = true;
-            this.alwaysOnTopCheck.Location = new System.Drawing.Point(179, 81);
+            this.alwaysOnTopCheck.Location = new System.Drawing.Point(151, 81);
             this.alwaysOnTopCheck.Name = "alwaysOnTopCheck";
             this.alwaysOnTopCheck.Size = new System.Drawing.Size(120, 18);
             this.alwaysOnTopCheck.TabIndex = 0;
@@ -121,6 +125,37 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Round: ";
+            // 
+            // round
+            // 
+            this.round.AutoSize = true;
+            this.round.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.round.Location = new System.Drawing.Point(65, 80);
+            this.round.Name = "round";
+            this.round.Size = new System.Drawing.Size(16, 18);
+            this.round.TabIndex = 8;
+            this.round.Text = "1";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(277, 78);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(22, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "?";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -128,6 +163,9 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(309, 102);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.round);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.decreaseButton);
@@ -137,9 +175,11 @@
             this.Controls.Add(this.alwaysOnTopCheck);
             this.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Energy Counter";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
@@ -157,6 +197,9 @@
         private System.Windows.Forms.Button decreaseButton;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label round;
+        private System.Windows.Forms.Button button2;
     }
 }
 
